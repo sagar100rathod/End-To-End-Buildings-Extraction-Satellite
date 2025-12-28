@@ -3,13 +3,19 @@
 This repository provides a **complete, reproducible workflow** for extracting **building footprints** from high-resolution **satellite imagery**.
 It covers every stage — from **dataset preparation (COCO → masks)** to **training DeepLabV3+ (ResNet101)** for **semantic segmentation**, leveraging **weighted boundary masks** for improved separation of adjacent buildings.
 
-## Project Overview
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
+https://colab.research.google.com/github/sagar100rathod/End-To-End-Buildings-Extraction-Satellite/blob/main/E2E_Building_Footprint_Extraction_Satellite_Imagery.ipynb
+)
+
+## Overview
 
 * **Goal:** Automatically segment and extract building footprints from satellite images.
 * **Dataset:** [Mapping Challenge (AIcrowd)](https://www.aicrowd.com/challenges/mapping-challenge-old)
 * **Model:** [DeepLabV3+](https://arxiv.org/abs/2104.01263) with **ResNet101** backbone.
 * **Framework:** PyTorch
 * **Key Technique:** Weighted boundary mask augmentation for better delineation of touching buildings.
+
+![Boundary Weight Mask Example](images/boundary-weight-mask.png)
 
 ## Notebook Covers entire Workflow
 
@@ -35,6 +41,10 @@ It covers every stage — from **dataset preparation (COCO → masks)** to **tra
 * **Evaluation Metrics:** Accuracy, Precision, Recall, F1 Score
 
 > Weighted boundary mask notably improves boundary precision for densely packed urban regions.
+
+
+## Sample Results:
+![Sample Predictions](images/sample-inference-result.png)
 
 ## References
 
